@@ -1,0 +1,18 @@
+---
+export interface Props {
+	text: string;
+    link: string;
+}
+
+const {text,link } = Astro.props;
+---
+<div class="relative group">
+    <a href={link} target="_blank" rel="noopener noreferrer" class=" hover:text-blue-500">
+        <slot />
+    </a>
+    <span class="absolute -bottom-[150%] -right-0 border-2 border-black rounded-full z-50 hidden group-hover:flex bg-white px-5 py-1 w-max ">
+        <p> 
+            {text}
+        </p>
+    </span>
+</div>
