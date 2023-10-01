@@ -6,7 +6,7 @@ const project = await Astro.glob('../content/project/*.md');
 // import Card from '../components/Card.astro';
 ---
 
-<Layout title="Safarr">
+<Layout title="safarudin">
 	<main class="w-screen flex flex-col items-center space-y-5 ">
 		<section class="flex flex-row w-[90%] h-max lg:w-[60%] mt-[10%] bg-white rounded-xl items-center space-x-5 px-10 md:px-0" >
 			<img src="/safarrr.png" alt="safarrr" class=" hidden md:inline md:w-60">
@@ -47,8 +47,7 @@ const project = await Astro.glob('../content/project/*.md');
 			<h1 class="text-xl font-bold bg-white w-full text-center py-3 rounded-xl" >Project</h1>
 			<div class="flex flex-wrap  justify-center items-center mt-5 gap-3" >
 				{
-					project.map(data => {
-						console.log("file: index.astro:46 ~ data:",  data.frontmatter.tech)
+					project.map(data => { 
 						return <ProjectCard title={data.frontmatter.title} imgUrl={data.frontmatter.imgUrl} desc={data.frontmatter.description} tech={data.frontmatter.tech} link={data.frontmatter.link} />
 						})
 					}
