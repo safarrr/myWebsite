@@ -1,0 +1,14 @@
+---
+import CardCraft from "../../components/CardCraft.astro";
+import Layout from "../../layouts/Layout.astro"
+const craft = await Astro.glob('../../content/craft/*.md');
+
+---
+
+<Layout title="Craft">
+	<div class="flex  items-center m-5 flex-wrap justify-center gap-2">
+        {craft.slice(0, 3).map(v=>{
+            return <CardCraft  link={v.frontmatter.link} title={v.frontmatter.title} imgUrl={v.frontmatter.imgUrl}/>
+        })}
+    </div>
+</Layout>

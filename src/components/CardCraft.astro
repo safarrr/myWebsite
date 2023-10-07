@@ -1,0 +1,23 @@
+---
+import { Image } from 'astro:assets';
+export interface Props {
+	title: string;
+	link?: string;
+	imgUrl : string
+}
+
+const { link, title,imgUrl, } = Astro.props;
+---
+
+<div class="flex flex-col text-left items-center w-max shadow  rounded-md rounded-br-3xl hover:scale-95 transition-all ease-in-out duration-300">
+	<div class="flex flex-col items-center bg-white  rounded-t-md py-2 px-3 ">
+		<h1>{title}</h1>
+	<Image src={imgUrl} alt="descriptive text"
+	width="200" height="200" />
+</div>
+{
+	link ?  <a href={link} class="inline-flex items-center group justify-between p-3 bg-neutral-50 text-sm w-full rounded-br-3xl  rounded-bl-md">
+	<p>learn more</p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="transition-all ease-in-out duration-300  group-hover:translate-x-2"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a> : ""
+}
+
+</div>
