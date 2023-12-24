@@ -10,11 +10,11 @@ const { title } = Astro.props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/png" href="/safarrr.png" />
+		<!-- <link rel="icon" type="image/png" href="/safarrr.png" /> -->
 		<meta name="description" content="web developer with a special focus on front-end development">
 		<link rel="canonical" href="https://safarudin.my.id"/>
 		<meta name="keywords" content="web developer, front-end development, safarrr,safarudin">
@@ -23,7 +23,7 @@ const { title } = Astro.props;
 		<meta property="og:type" content="website">
 		<meta property="og:title" content="safarudin">
 		<meta property="og:description" content="web developer with a special focus on front-end development">
-		<meta property="og:image" content="/safarrr.png">
+		<!-- <meta property="og:image" content="/safarrr.png"> -->
 	  
 		<!-- Twitter Meta Tags -->
 		<meta name="twitter:card" content="summary_large_image">
@@ -31,19 +31,62 @@ const { title } = Astro.props;
 		<meta property="twitter:url" content="https://safarudin.my.id">
 		<meta name="twitter:title" content="safarudin">
 		<meta name="twitter:description" content="web developer with a special focus on front-end development">
-		<meta name="twitter:image" content="/safarrr.png">
+		<!-- <meta name="twitter:image" content="/safarrr.png"> -->
 		<!-- <ViewTransitions/> -->
 		<title>{title}</title>
 	</head>
-	<body   class="bg-neutral-100 overflow-x-hidden text-black font-inter " >
-		<section class="sticky top-0 z-50 w-full p-2">
-			<div class="flex flex-col border-b p-3 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 rounded-md ">
-				<h1 class="font-black uppercase text-xl">Safarudin</h1>
-				<p class="text-sm">Front-End Web Developer</p>
+	<body class="bg-neutral-100 dark:bg-gray-950 overflow-x-hidden text-black dark:text-neutral-50 transition-colors ease-in-ou font-inter" >
+		<section class="sticky top-0 z-50 w-full bg-white dark:bg-gray-950 dark:text-neutral-50 transition-colors">
+			<div class="inline-flex items-center justify-between py-2 px-3 w-full">	
+				<div class="flex flex-col  p-3 rounded-md ">
+					<h1 class="font-black uppercase text-xl">Safarudin</h1>
+					<p class="text-sm">Front-End Web Developer</p>
+				</div>
+				<button id="btnDark" class="dark:text-neutral-50 text-lg">
+					<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+						<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"/>
+					  </svg>
+				</button>
 			</div>
 		</section>
 		<slot />
 		<!-- <Nav/> -->
-
+		<script>
+			let isDark = false
+			const svgMoon = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-moon-fill" viewBox="0 0 16 16">
+						<path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278"/>
+					  </svg>`
+			const light =`<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-brightness-high-fill" viewBox="0 0 16 16">
+  							<path d="M12 8a4 4 0 1 1-8 0 4 4 0 0 1 8 0M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+						 </svg>`
+			const btnDark = document.getElementById("btnDark")
+			const el = document.getElementById("html")
+			btnDark.addEventListener("click",()=>{
+				if(isDark){
+					el.classList.add("dark")
+					btnDark.innerHTML = light
+				}else {
+					el.classList.remove("dark")
+					btnDark.innerHTML = svgMoon
+				}
+				isDark = !isDark
+			})
+			if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+				el.classList.add("dark")
+				isDark = true
+				btnDark.innerHTML = light
+			}
+			window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', event => {
+				if(event.matches){
+					el.classList.add("dark")
+					btnDark.innerHTML = svgMoon
+				}else {
+					el.classList.remove("dark")
+					btnDark.innerHTML = light
+				}
+				isDark = event.matches
+			});
+		
+		</script>
 	</body>
 </html>
