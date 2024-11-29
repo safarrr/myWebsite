@@ -28,7 +28,7 @@
 					have fun swimming through code!.
 				</p>
 				<p class="">
-					I often use <span class=" font-semibold underline">javascript, </span><span
+					I use <span class=" font-semibold underline">javascript, </span><span
 						class=" font-semibold underline"
 						>Typescript,
 					</span><span class=" font-semibold underline">python</span> and hopefully there will be
