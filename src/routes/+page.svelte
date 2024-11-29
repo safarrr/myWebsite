@@ -3,8 +3,7 @@
 	import Ripple from '$lib/components/Ripple.svelte';
 	import { cn } from '$lib/utils';
 	import Face from '$lib/components/Face.svelte';
-	import Link from '$lib/components/Link.svelte';
-	import BlueSky from '$lib/assets/image/bluesky.png';
+	import Link from '$lib/components/Link.svelte'; 
 </script>
 
 <section class="flex h-screen w-screen flex-col p-10">
