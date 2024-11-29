@@ -3,7 +3,7 @@
 	import Ripple from '$lib/components/Ripple.svelte';
 	import { cn } from '$lib/utils';
 	import Face from '$lib/components/Face.svelte';
-	import Link from '$lib/components/Link.svelte'; 
+	import Link from '$lib/components/Link.svelte';
 </script>
 
 <section class="flex h-screen w-screen flex-col p-10">
@@ -16,11 +16,11 @@
 	/>
 	<div class=" container-md z-10 mx-auto inline-flex justify-between space-x-2">
 		<div class="flex flex-col">
-			<p class=" text-4xl font-bold">Hello.</p>
 			<div class="relative inline-flex w-max">
-				<h1 class="text-2xl font-bold">My name is Safarudin.</h1>
+				<h1 class=" text-4xl font-bold">Hello.</h1>
 				<span class="waving-hand absolute right-[-70px] top-[-15px] text-5xl">👋</span>
 			</div>
+			<h1 class="text-2xl font-bold">My name is Safarudin.</h1>
 			<div class="flex w-[80%] flex-col space-y-2">
 				<p class="">
 					I'm a programmer from West Java, Indonesia. I use my skills to create cool stuff or just
