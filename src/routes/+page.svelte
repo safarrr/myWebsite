@@ -44,7 +44,7 @@
 					You can follow me on
 					<Link to="https://bsky.app/profile/safarudin.bsky.social">BlueSky</Link> and
 					<Link to="https://x.com/justsafarr">Twiter/x</Link> or just <Link
-						to="mailto:safar190305@gmail.com">email: safar190305@gmail.com</Link
+						to="mailto:safarudin.dev@gmail.com">email: safarudin.dev@gmail.com</Link
 					>
 				</p>
 			</div>
