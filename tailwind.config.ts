@@ -7,6 +7,32 @@ export default {
 
 	theme: {
 		extend: {
+			typography: (theme) => ({
+				 
+			// typography: {
+					DEFAULT: {
+						
+						css: {
+							"code::before": { content: '""' },
+							"code::after": { content: '""' },
+							color: theme("colors.gray.50"),
+							"p,h1,h2,h3,h4,h5,h6,code,input,label,li,th,td":{ color:theme("colors.gray.50")},
+							strong:{ color:theme("colors.gray.50")},
+							"li::before":{color: theme("colors.gray.50")},
+							"li::marker": {color:theme("colors.gray.50")},
+							figcaption:{color: theme("colors.gray.50")}, 
+							a: {
+								color: theme("colors.blue.500"),
+								textDecoration:"none",
+								'&:hover': {
+								  color: theme("colors.blue.500"),
+								  textDecoration:"underline"
+								},
+							  },
+							
+					},
+				},
+		}),		
 			animation: {
 				// ripple: "ripple 3400ms ease infinite",
 				ripple: 'ripple var(--duration,2s) ease calc(var(--i, 0)*.2s) infinite'

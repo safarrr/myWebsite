@@ -1,6 +1,10 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+@import url(./style/prism.css);
 body {
 	@apply bg-neutral-950 text-gray-50;
-}
+} 
+article > table {
+@apply	w-full
+}  
