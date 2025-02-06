@@ -51,18 +51,23 @@
 						> or
 						<Link to="https://gitlab.com/safar190305">gitlab</Link>
 					</p>
-					<p class="">
+					<!-- <p class="">
 						currcurrently I work as a fullstack website developer in a small company in West Java,
 						using
 						<span class=" font-semibold underline">Vue</span> and
 						<span class=" font-semibold underline">Nodejs</span>
-					</p>
+					</p> -->
 					<p class="">
 						You can follow me on
 						<Link to="https://bsky.app/profile/safarudin.bsky.social">BlueSky</Link> and
 						<Link to="https://x.com/justsafarr">Twiter/x</Link> or just <Link
 							to="mailto:safarudin.dev@gmail.com">email: safarudin.dev@gmail.com</Link
 						>
+					</p>
+					<p class="">
+						other
+						<Link to="https://www.linkedin.com/in/safarudin19/">linkedin</Link>,
+						<Link to="https://www.instagram.com/safar19x/">Instagram</Link>
 					</p>
 				</div>
 			</div>
