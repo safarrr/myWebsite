@@ -67,7 +67,7 @@
 					<p class="">
 						other
 						<Link to="https://www.linkedin.com/in/safarudin19/">linkedin</Link>,
-						<Link to="https://www.instagram.com/safar19x/">Instagram</Link>
+						<Link to="https://www.instagram.com/safar19x/">Instagram</Link>,
 						<Link to="https://www.fiverr.com/safarudinn">fiverr</Link>
 					</p>
 				</div>
