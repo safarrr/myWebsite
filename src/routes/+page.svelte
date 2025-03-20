@@ -22,13 +22,13 @@
 	let dataPost = data.data || [];
 </script>
 
-<div class="w-svw overflow-hidden">
-	<section class="flex h-svh w-svw flex-col justify-center p-10">
+<div class="w-svw">
+	<section class="flex min-h-svh w-svw flex-col justify-center p-10">
 		<div class="z-10 container mx-auto inline-flex justify-between space-x-2">
-			<div class="flex flex-col">
+			<div class="flex h-full flex-col">
 				<div class="relative inline-flex w-max">
 					<BoxReveal boxColor={'white'} duration={0.5}>
-						<h1 class=" text-4xl font-bold">Hello.</h1>
+						<h1 class="text-4xl font-bold">Hello.</h1>
 					</BoxReveal>
 					<!-- <span class="waving-hand absolute top-[-15px] right-[-70px] text-5xl">👋</span> -->
 				</div>
@@ -36,7 +36,7 @@
 					<span>My name is </span>
 					<BoxReveal boxColor={'white'} duration={0.8}>Safarudin.</BoxReveal>
 				</h1>
-				<div class="flex w-[70%] flex-col space-y-2">
+				<div class="flex flex-col space-y-2 text-sm lg:w-[70%] lg:text-base">
 					<p class="">
 						I'm a programmer from West Java, Indonesia, who loves turning ideas into reality through
 						code. Whether it's building web applications, exploring new technologies, or just
