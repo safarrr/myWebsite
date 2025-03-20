@@ -36,7 +36,7 @@
 		<a href="/#blog" class="text-lg">all post</a>
 		<!-- <span></span> -->
 	</div>
-	<div class="z-10 rounded bg-neutral-900 p-5">
+	<div class="z-10 rounded-sm bg-neutral-900 p-5">
 		<h1 class="text-3xl font-bold">{meta.title ?? ''}</h1>
 		<div class="inline-flex space-x-2">
 			<p><b class="font-bold">Published</b>: {meta.date}</p>
