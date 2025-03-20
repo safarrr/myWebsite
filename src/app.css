@@ -2,7 +2,10 @@
 @import url(./style/prism.css) layer(utilities);
 
 @config '../tailwind.config.ts';
-
+@font-face {
+  font-family: comme;
+  src: url("/font/Comme-VariableFont_wght.ttf");
+}
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still
@@ -18,6 +21,7 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+    font-family: comme
   }
 }
 

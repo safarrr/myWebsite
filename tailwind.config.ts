@@ -11,8 +11,8 @@ export default {
 				 
 			// typography: {
 					DEFAULT: {
-						
 						css: {
+							"font-family":"comme",
 							"code::before": { content: '""' },
 							"code::after": { content: '""' },
 							color: theme("colors.gray.50"),
@@ -50,5 +50,5 @@ export default {
 		}
 	},
 
-	plugins: [typography, containerQueries]
+	plugins: [typography, containerQueries,]
 } satisfies Config;

@@ -5,6 +5,7 @@
 	import Face from '$lib/components/Face.svelte';
 	import Link from '$lib/components/Link.svelte';
 	import type { PageData } from './$types';
+	import BoxReveal from '$lib/components/BoxReveal.svelte';
 	interface MetadataType {
 		title: string;
 		date: string;
@@ -23,24 +24,33 @@
 
 <div class="w-svw overflow-hidden">
 	<section class="flex h-svh w-svw flex-col justify-center p-10">
-		<GridPattern
-			width={20}
-			height={20}
-			x={-1}
-			y={-1}
-			class={cn('z-0 [mask-image:linear-gradient(to_bottom_right,white,transparent,transparent)] ')}
-		/>
-		<div class=" container-md z-10 mx-auto inline-flex justify-between space-x-2">
+		<div class="z-10 container mx-auto inline-flex justify-between space-x-2">
 			<div class="flex flex-col">
 				<div class="relative inline-flex w-max">
-					<h1 class=" text-4xl font-bold">Hello.</h1>
-					<span class="waving-hand absolute right-[-70px] top-[-15px] text-5xl">👋</span>
+					<BoxReveal boxColor={'white'} duration={0.5}>
+						<h1 class=" text-4xl font-bold">Hello.</h1>
+					</BoxReveal>
+					<!-- <span class="waving-hand absolute top-[-15px] right-[-70px] text-5xl">👋</span> -->
 				</div>
-				<h1 class="text-2xl font-bold">My name is Safarudin.</h1>
-				<div class="flex w-[80%] flex-col space-y-2">
+				<h1 class="flex space-x-2 text-2xl font-bold">
+					<span>My name is </span>
+					<BoxReveal boxColor={'white'} duration={0.8}>Safarudin.</BoxReveal>
+				</h1>
+				<div class="flex w-[70%] flex-col space-y-2">
 					<p class="">
-						I'm a programmer from West Java, Indonesia. I use my skills to create cool stuff or just
-						have fun swimming through code!.
+						I'm a programmer from West Java, Indonesia, who loves turning ideas into reality through
+						code. Whether it's building web applications, exploring new technologies, or just
+						experimenting with creative projects, I enjoy every step of the process.
+					</p>
+					<p class="">
+						Beyond coding, I have a passion for UI/UX design and often use Figma to craft clean,
+						user-friendly interfaces. I believe that great design enhances functionality, making
+						digital experiences more intuitive and enjoyable.
+					</p>
+					<p class="">
+						Reading books is another passion, especially those about technology, self-improvement,
+						and new topics that spark curiosity. Learning new things and taking on challenges is
+						something I truly enjoy, always seeking fresh insights and skills to improve my craft.
 					</p>
 					<p class="">
 						I use <span class=" font-semibold underline">javascript, </span><span
@@ -72,12 +82,15 @@
 					</p>
 				</div>
 			</div>
-			<div class=" hidden md:block">
+			<div class=" hidden lg:block">
 				<Face />
 			</div>
 		</div>
 	</section>
-	<div id="blog" class="flex flex-col gap-2 overflow-x-hidden rounded-t-xl bg-neutral-900 p-5">
+	<div
+		id="blog"
+		class="flex flex-col gap-2 overflow-x-hidden rounded-t-xl bg-neutral-900 px-5 py-8"
+	>
 		<h1 class=" text-xl font-bold">Blog</h1>
 		<div class="">blog is only available in bahasa Indonesian for now</div>
 		<div class="flex w-full flex-wrap items-center justify-center gap-2">
@@ -97,42 +110,3 @@
 		</div>
 	</div>
 </div>
-
-<!-- blog -->
-
-<style>
-	.waving-hand:hover {
-		animation-name: wave-animation;
-		animation-duration: 2.5s;
-		animation-iteration-count: infinite;
-		transform-origin: 70% 70%;
-		display: inline-block;
-	}
-
-	@keyframes wave-animation {
-		0% {
-			transform: rotate(0deg);
-		}
-		15% {
-			transform: rotate(14deg);
-		}
-		30% {
-			transform: rotate(-8deg);
-		}
-		40% {
-			transform: rotate(14deg);
-		}
-		50% {
-			transform: rotate(-4deg);
-		}
-		60% {
-			transform: rotate(10deg);
-		}
-		70% {
-			transform: rotate(0deg);
-		}
-		100% {
-			transform: rotate(0deg);
-		}
-	}
-</style>
