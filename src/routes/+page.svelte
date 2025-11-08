@@ -78,13 +78,18 @@
 						other
 						<Link to="https://www.linkedin.com/in/safarudin19/">linkedin</Link>,
 						<Link to="https://www.instagram.com/safar19x/">Instagram</Link>,
-						<Link to="https://www.fiverr.com/safarudinn">fiverr</Link>
 					</p>
 				</div>
 			</div>
 			<div class=" hidden lg:block">
 				<Face />
 			</div>
+		</div>
+		<div class="container flex flex-col items-start space-y-2 p-10">
+			<h3 class="text-2xl font-bold">Random Tools</h3>
+			<a href="/tools" class="rounded-lg bg-neutral-100 px-5 py-2 text-black hover:bg-neutral-400"
+				>Tools</a
+			>
 		</div>
 	</section>
 	<div
