@@ -3,8 +3,8 @@
 
 @config '../tailwind.config.ts';
 @font-face {
-  font-family: comme;
-  src: url("/font/Comme-VariableFont_wght.ttf");
+	font-family: comme;
+	src: url('/font/Comme-VariableFont_wght.ttf');
 }
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -15,19 +15,45 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-    font-family: comme
-  }
+	*,
+	::after,
+	::before,
+	::backdrop,
+	::file-selector-button {
+		border-color: var(--color-gray-200, currentColor);
+		font-family: comme;
+	}
 }
 
 body {
 	@apply bg-neutral-950 text-gray-50;
-} 
+}
 article > table {
-@apply	w-full
-}  
+	@apply w-full;
+}
+
+body {
+	--sb-track-color: var(--color-neutral-950);
+	--sb-thumb-color: var(--color-neutral-400);
+	--sb-size: 5px;
+}
+
+body::-webkit-scrollbar {
+	width: var(--sb-size);
+}
+
+body::-webkit-scrollbar-track {
+	background: var(--sb-track-color);
+	border-radius: 3px;
+}
+
+body::-webkit-scrollbar-thumb {
+	background: var(--sb-thumb-color);
+	border-radius: 3px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+	body {
+		scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+	}
+}
