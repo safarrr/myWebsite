@@ -85,7 +85,7 @@
 				<Face />
 			</div>
 		</div>
-		<div class="container flex flex-col items-start space-y-2 p-10">
+		<div class="container mx-auto flex flex-col items-start space-y-2 pt-2">
 			<h3 class="text-2xl font-bold">Random Tools</h3>
 			<a href="/tools" class="rounded-lg bg-neutral-100 px-5 py-2 text-black hover:bg-neutral-400"
 				>Tools</a
