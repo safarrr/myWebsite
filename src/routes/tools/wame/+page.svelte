@@ -35,9 +35,9 @@
 		<p>Generate a link to chat without saving number. can multiple link</p>
 	</div>
 	<div
-		class="flex max-h-[80%] flex-col gap-3 rounded-lg border border-neutral-100/10 bg-neutral-100/10 p-5 backdrop-blur-3xl md:flex-row"
+		class="flex max-h-[80%] max-w-[80%] flex-col gap-3 overflow-auto rounded-lg border border-neutral-100/10 bg-neutral-100/10 p-5 backdrop-blur-3xl md:flex-row"
 	>
-		<div class="flex flex-col space-y-3 p-2">
+		<div class="flex w-[500px] flex-col space-y-3 p-2">
 			<div class="flex flex-col space-y-2">
 				<label class="text-lg font-bold" for="numbers">List of numbers</label>
 				<textarea
@@ -64,7 +64,7 @@
 				class="rounded-lg bg-neutral-100 px-5 py-2 text-black hover:bg-neutral-400">Generate</button
 			>
 		</div>
-		<div class=" flex flex-col gap-2 p-2">
+		<div class=" flex w-[80%] flex-col gap-2 p-2">
 			<p>Generated links</p>
 			<div class=" inline-flex gap-2">
 				<button
@@ -78,7 +78,7 @@
 					onclick={downloadFile}>Download file text</button
 				>
 			</div>
-			<div class=" scrollbar-links flex flex-col overflow-y-auto">
+			<div class=" scrollbar-links flex w-full flex-col overflow-auto">
 				{#if links.length > 0}
 					{#each links as link, index (index)}
 						<a href={link}>{link}</a>
