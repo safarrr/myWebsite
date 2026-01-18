@@ -1,59 +1,75 @@
 @import 'tailwindcss';
-@import url(./style/prism.css) layer(utilities);
+@import url('./style/prism.css') layer(utilities);
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
 @config '../tailwind.config.ts';
-@font-face {
-	font-family: comme;
-	src: url('/font/Comme-VariableFont_wght.ttf');
-}
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these compatibility styles to make sure everything still
-  looks the same as it did with Tailwind CSS v3.
 
-  If we ever want to remove these styles, we need to add an explicit border
-  color utility to any element that depends on these defaults.
-*/
+@theme {
+	--font-sans: 'Inter', sans-serif;
+	--font-heading: 'Inter', sans-serif;
+
+	--color-background: #09090b; /* Zinc 950 */
+	--color-foreground: #fafafa; /* Zinc 50 */
+
+	--color-primary: #ffffff;
+	--color-primary-foreground: #09090b;
+
+	--color-muted: #18181b; /* Zinc 900 */
+	--color-muted-foreground: #a1a1aa; /* Zinc 400 */
+
+	--color-accent: #27272a; /* Zinc 800 */
+	--color-accent-foreground: #fafafa;
+}
+
 @layer base {
-	*,
-	::after,
-	::before,
-	::backdrop,
-	::file-selector-button {
-		border-color: var(--color-gray-200, currentColor);
-		font-family: comme;
+	html {
+		font-family: 'Inter', sans-serif;
+		scroll-behavior: smooth;
+		background-color: var(--color-background);
+		color: var(--color-foreground);
+	}
+
+	body {
+		@apply bg-background text-foreground antialiased;
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: 'Inter', sans-serif;
+		font-weight: 600;
+		letter-spacing: -0.025em;
 	}
 }
 
-body {
-	@apply bg-neutral-950 text-gray-50;
-}
-article > table {
-	@apply w-full;
-}
-
-body {
-	--sb-track-color: var(--color-neutral-950);
-	--sb-thumb-color: var(--color-neutral-400);
-	--sb-size: 5px;
-}
-
-body::-webkit-scrollbar {
-	width: var(--sb-size);
+/* Custom Scrollbar */
+@media (min-width: 640px) {
+	::-webkit-scrollbar {
+		width: 6px;
+		height: 6px;
+	}
+	::-webkit-scrollbar-track {
+		@apply bg-zinc-950;
+	}
+	::-webkit-scrollbar-thumb {
+		@apply rounded-full bg-zinc-800 transition-colors hover:bg-zinc-700;
+	}
 }
 
-body::-webkit-scrollbar-track {
-	background: var(--sb-track-color);
-	border-radius: 3px;
-}
+/* Utilities */
+@layer utilities {
+	.glass {
+		@apply border-b border-white/5 bg-zinc-950/80 backdrop-blur-md;
+	}
 
-body::-webkit-scrollbar-thumb {
-	background: var(--sb-thumb-color);
-	border-radius: 3px;
-}
+	.subtle-border {
+		@apply border border-white/5;
+	}
 
-@supports not selector(::-webkit-scrollbar) {
-	body {
-		scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+	.text-gradient {
+		@apply bg-linear-to-b from-white to-white/60 bg-clip-text text-transparent;
 	}
 }
