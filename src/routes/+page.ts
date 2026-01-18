@@ -1,26 +1,12 @@
-import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
-import { getPostAll } from '$lib/utils';
-interface Post {
-	link: string;
-	metadata?: {
-		title: string;
-		date: string;
-		updated: string;
-		author: string[];
-		categories: string[];
-		description: string[];
+import { getPostAll, getProjectAll } from '$lib/utils';
+
+export const load: PageLoad = async () => {
+	const posts = await getPostAll();
+	const projects = await getProjectAll();
+
+	return {
+		posts: posts.slice(0, 3), // Top 3 posts
+		projects: projects.slice(0, 3) // Top 3 projects
 	};
-}
-export const load: PageLoad = async ({ params }) => {
-	try {
-		const data = await getPostAll();
-
-		// const post = await
-		return { data: data };
-	} catch (err) {
-		console.error(err);
-
-		error(505, 'error');
-	}
 };
