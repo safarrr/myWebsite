@@ -26,15 +26,9 @@ export const SOCIALS = [
 		icon: Linkedin
 	},
 	{
-		label: 'GitLab',
-		href: 'https://gitlab.com',
-		handle: '@safarrr',
-		icon: Gitlab
-	},
-	{
 		label: 'Instagram',
-		href: 'https://instagram.com',
-		handle: '@safarudin',
+		href: 'https://instagram.com/safar19x',
+		handle: '@safar19x',
 		icon: Instagram
 	},
 	{

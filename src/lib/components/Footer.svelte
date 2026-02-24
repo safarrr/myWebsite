@@ -10,7 +10,7 @@
 				&copy; {currentYear} Safarudin. All rights reserved.
 			</div>
 
-			<div class="flex w-full justify-center gap-6">
+			<div class="flex w-full flex-wrap justify-center gap-6">
 				{#each SOCIALS.slice(0, 4) as social}
 					<a
 						href={social.href}
