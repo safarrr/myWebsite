@@ -2,7 +2,7 @@
 	import type { PostMetadata } from '$lib/utils';
 
 	let { data } = $props();
-	let posts = data.posts;
+	let posts = $derived(data.posts);
 </script>
 
 <svelte:head>

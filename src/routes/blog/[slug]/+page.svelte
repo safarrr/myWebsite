@@ -2,7 +2,7 @@
 	import { ArrowLeft } from 'lucide-svelte';
 
 	let { data } = $props();
-	let { metadata, content: Content } = data;
+	let { metadata, content: Content } = $derived(data);
 </script>
 
 <svelte:head>

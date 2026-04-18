@@ -437,7 +437,6 @@
 						? 'block'
 						: 'hidden'}"
 				>
-					<!-- svelte-ignore a11y-media-has-caption -->
 					<!-- svelte-ignore a11y_media_has_caption -->
 					<video
 						bind:this={videoElement}

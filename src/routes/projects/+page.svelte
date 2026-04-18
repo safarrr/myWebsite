@@ -2,7 +2,7 @@
 	import type { ProjectMetadata } from '$lib/utils';
 
 	let { data } = $props();
-	let projects = data.projects as { slug: string; metadata: ProjectMetadata }[];
+	let projects = $derived(data.projects as { slug: string; metadata: ProjectMetadata }[]);
 </script>
 
 <svelte:head>

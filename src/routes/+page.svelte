@@ -3,7 +3,7 @@
 	import { SOCIALS, TECH_STACK } from '$lib/config';
 
 	let { data } = $props();
-	let { projects } = data;
+	let { projects } = $derived(data);
 </script>
 
 <svelte:head>

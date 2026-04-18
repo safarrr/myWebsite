@@ -3,7 +3,7 @@
 	import type { ProjectMetadata } from '$lib/utils';
 
 	let { data } = $props();
-	let { metadata, content: Content } = data as { metadata: ProjectMetadata; content: any };
+	let { metadata, content: Content } = $derived(data as { metadata: ProjectMetadata; content: any });
 	// content is the rendered svelte component from mdsvex
 </script>
 
