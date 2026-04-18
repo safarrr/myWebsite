@@ -8,7 +8,22 @@
 
 <svelte:head>
 	<title>Safarudin | Programer</title>
-	<meta name="description" content="Portfolio of Safarudin, a Programer from Indonesia." />
+	<meta name="description" content="programmer from West Java, Indonesia. I use my skills to create cool stuff or just have fun swimming through code!" />
+	<meta name="keywords" content="web developer, front-end development, safarrr,safarudin,programmer" />
+	<link rel="canonical" href="https://safarudin.my.id" />
+
+	<!-- Facebook Meta Tags -->
+	<meta property="og:url" content="https://safarudin.my.id" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Safarudin | Programer" />
+	<meta property="og:description" content="programmer from West Java, Indonesia. I use my skills to create cool stuff or just have fun swimming through code!" />
+
+	<!-- Twitter -->
+	<meta property="twitter:domain" content="safarudin.my.id" />
+	<meta property="twitter:url" content="https://safarudin.my.id" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Safarudin | Programer" />
+	<meta name="twitter:description" content="programmer from West Java, Indonesia. I use my skills to create cool stuff or just have fun swimming through code!" />
 </svelte:head>
 
 <section class="container mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">

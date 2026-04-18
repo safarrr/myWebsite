@@ -8,6 +8,22 @@
 <svelte:head>
 	<title>{metadata.title} | Blog</title>
 	<meta name="description" content={metadata.description} />
+	
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content={metadata.title} />
+	<meta property="og:description" content={metadata.description} />
+	{#if metadata.image}
+		<meta property="og:image" content={metadata.image} />
+	{/if}
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:title" content={metadata.title} />
+	<meta property="twitter:description" content={metadata.description} />
+	{#if metadata.image}
+		<meta property="twitter:image" content={metadata.image} />
+	{/if}
 </svelte:head>
 
 <article class="container mx-auto max-w-4xl px-4 py-12 sm:px-6 lg:px-8">

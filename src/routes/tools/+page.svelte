@@ -4,6 +4,17 @@
 
 <svelte:head>
 	<title>Tools | Safarudin</title>
+	<meta name="description" content="A collection of web tools, utilities, and experiments created by Safarudin." />
+	<link rel="canonical" href="https://safarudin.my.id/tools" />
+	<meta property="og:url" content="https://safarudin.my.id/tools" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Tools | Safarudin" />
+	<meta property="og:description" content="A collection of web tools, utilities, and experiments created by Safarudin." />
+	<meta property="twitter:domain" content="safarudin.my.id" />
+	<meta property="twitter:url" content="https://safarudin.my.id/tools" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="Tools | Safarudin" />
+	<meta name="twitter:description" content="A collection of web tools, utilities, and experiments created by Safarudin." />
 </svelte:head>
 
 <section class="container mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">

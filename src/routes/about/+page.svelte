@@ -4,7 +4,17 @@
 
 <svelte:head>
 	<title>About | Safarudin</title>
-	<meta name="description" content="Learn more about Safarudin and his journey." />
+	<meta name="description" content="Learn more about Safarudin and his journey as a programmer from West Java, Indonesia." />
+	<link rel="canonical" href="https://safarudin.my.id/about" />
+	<meta property="og:url" content="https://safarudin.my.id/about" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="About | Safarudin" />
+	<meta property="og:description" content="Learn more about Safarudin and his journey as a programmer from West Java, Indonesia." />
+	<meta property="twitter:domain" content="safarudin.my.id" />
+	<meta property="twitter:url" content="https://safarudin.my.id/about" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:title" content="About | Safarudin" />
+	<meta name="twitter:description" content="Learn more about Safarudin and his journey as a programmer from West Java, Indonesia." />
 </svelte:head>
 
 <section class="container mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">

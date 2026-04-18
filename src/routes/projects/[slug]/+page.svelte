@@ -10,6 +10,22 @@
 <svelte:head>
 	<title>{metadata.title} | Projects</title>
 	<meta name="description" content={metadata.description} />
+	
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content={metadata.title} />
+	<meta property="og:description" content={metadata.description} />
+	{#if metadata.thumbnail}
+		<meta property="og:image" content={metadata.thumbnail} />
+	{/if}
+
+	<!-- Twitter -->
+	<meta property="twitter:card" content="summary_large_image" />
+	<meta property="twitter:title" content={metadata.title} />
+	<meta property="twitter:description" content={metadata.description} />
+	{#if metadata.thumbnail}
+		<meta property="twitter:image" content={metadata.thumbnail} />
+	{/if}
 </svelte:head>
 
 <article class="container mx-auto px-4 py-12 sm:px-6 lg:px-8">
