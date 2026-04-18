@@ -1,5 +1,5 @@
 <script>
-	import { MessageCircle } from 'lucide-svelte';
+	import { MessageCircle, MonitorUp } from 'lucide-svelte';
 </script>
 
 <svelte:head>
@@ -15,6 +15,19 @@
 	</div>
 
 	<div class="space-y-6">
+		<a
+			href="/tools/screenshare"
+			class="block rounded-lg border border-white/10 bg-white/5 p-6 transition-colors hover:bg-white/10 hover:border-emerald-500/50"
+		>
+			<div class="flex items-center gap-3">
+				<MonitorUp size={20} class="text-emerald-400" />
+				<h2 class="text-xl font-bold text-white">P2P Screen Share</h2>
+			</div>
+			<p class="mt-2 text-sm text-zinc-400">
+				Low-latency, direct peer-to-peer screen sharing directly from your browser.
+			</p>
+		</a>
+
 		<a
 			href="/tools/wame"
 			class="block rounded-lg border border-white/10 bg-white/5 p-6 transition-colors hover:bg-white/10"
