@@ -29,7 +29,7 @@ export function getPostAll() {
 	const glob_import = import.meta.glob<{ metadata: PostMetadata }>('$lib/posts/*.md', {
 		eager: true
 	});
-	let post: { link: string; metadata: PostMetadata }[] = [];
+	const post: { link: string; metadata: PostMetadata }[] = [];
 	const blog = Object.entries(glob_import);
 	for (let i = 0; i < blog.length; i++) {
 		const el = blog[i];
