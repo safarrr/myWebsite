@@ -1,5 +1,5 @@
 <script>
-	import { MessageCircle, MonitorUp } from 'lucide-svelte';
+	import { MessageCircle, MonitorUp, Camera } from 'lucide-svelte';
 </script>
 
 <svelte:head>
@@ -36,6 +36,19 @@
 			</div>
 			<p class="mt-2 text-sm text-zinc-400">
 				Low-latency, direct peer-to-peer screen sharing directly from your browser.
+			</p>
+		</a>
+
+		<a
+			href="/tools/photobooth"
+			class="block rounded-lg border border-white/10 bg-white/5 p-6 transition-colors hover:bg-white/10 hover:border-emerald-500/50"
+		>
+			<div class="flex items-center gap-3">
+				<Camera size={20} class="text-pink-400" />
+				<h2 class="text-xl font-bold text-white">Web Photobooth</h2>
+			</div>
+			<p class="mt-2 text-sm text-zinc-400">
+				Client-side interactive photobooth. Capture, create layouts, add stickers, and draw freely.
 			</p>
 		</a>
 

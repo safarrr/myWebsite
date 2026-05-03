@@ -39,6 +39,7 @@
 	"dependencies": {
 		"@tailwindcss/container-queries": "^0.1.1",
 		"clsx": "^2.1.1",
+		"fabric": "^7.3.1",
 		"lucide-svelte": "^0.471.0",
 		"peerjs": "^1.5.5",
 		"remark-collapse": "^0.1.2",
