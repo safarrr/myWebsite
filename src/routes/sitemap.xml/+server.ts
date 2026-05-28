@@ -15,18 +15,19 @@ export async function GET() {
 		{ url: '/tools', priority: 0.7 },
 		{ url: '/tools/wame', priority: 0.6 },
 		{ url: '/tools/screenshare', priority: 0.6 },
+		{ url: '/tools/photobooth', priority: 0.6 }
 	];
 
 	const pages = [
 		...staticPages,
 		...posts.map((post) => ({
 			url: `/blog/${post.link}`,
-			priority: 0.8,
+			priority: 0.8
 		})),
 		...projects.map((project) => ({
 			url: `/projects/${project.slug}`,
-			priority: 0.7,
-		})),
+			priority: 0.7
+		}))
 	];
 
 	const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -45,7 +46,7 @@ ${pages
 	return new Response(sitemap.trim(), {
 		headers: {
 			'Content-Type': 'application/xml',
-			'Cache-Control': 'max-age=3600',
-		},
+			'Cache-Control': 'max-age=3600'
+		}
 	});
 }

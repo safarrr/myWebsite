@@ -28,7 +28,7 @@
 		<p class="text-lg text-zinc-400">Things I've built</p>
 	</div>
 
-	{#if projects.length > 0}
+	<!-- {#if projects.length > 0}
 		<div class="space-y-6">
 			{#each projects as project}
 				<a
@@ -49,5 +49,5 @@
 		</div>
 	{:else}
 		<div class="text-center text-zinc-500">No projects found.</div>
-	{/if}
+	{/if} -->
 </section>
