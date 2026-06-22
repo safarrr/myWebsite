@@ -34,7 +34,7 @@
 		<p class="text-lg text-zinc-400">Programer from Indonesia</p>
 	</div>
 
-	<!-- {#if projects[0]}
+	{#if projects[0]}
 		<div class=" p-5">
 			<h2 class="mb-6 text-xl font-bold text-white">Featured Project</h2>
 			<div class="rounded-lg border border-white/10 bg-white/5 p-6">
@@ -48,7 +48,7 @@
 				</a>
 			</div>
 		</div>
-	{/if} -->
+	{/if}
 	<div class="space-y-12">
 		<div class="border-t border-white/10 px-5 pt-5 pb-5">
 			<h2 class="mb-6 text-xl font-bold text-white">Tech Stack</h2>

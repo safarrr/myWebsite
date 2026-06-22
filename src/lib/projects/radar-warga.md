@@ -1,7 +1,7 @@
 ---
 title: 'Radar Warga'
 date: '2026-01-08'
-description: 'AI-powered public facility reporting platform leveraging Computer Vision for automatic priority analysis.'
+description: 'A public facility reporting platform that helps residents submit damage reports and helps officers decide which reports should be handled first.'
 tech:
   - 'Laravel'
   - 'Inertia.js'
@@ -19,50 +19,48 @@ gallery:
 #   - '/projects/radar-warga-gallery-2.jpeg'
 ---
 
-# Radar Warga: AI-Driven Public Facility Reporting Revolution
+# Radar Warga
 
 ### Background
 
-Public facility damages—ranging from dangerous potholes and broken streetlights to clogged drainage systems—are often addressed too late. The core issue isn't a lack of citizen concern, but rather the **inefficiency of the reporting workflow**. Reports scattered across various social media channels make status monitoring difficult, and without centralized data, prioritizing repairs becomes subjective.
+Radar Warga was built to make public facility reports easier to collect and follow up. In many cases, reports about broken roads, damaged streetlights, clogged drains, or similar problems are scattered across social media, chat groups, or private messages. Because of that, it becomes hard to track which reports are new, which ones are being handled, and which ones should be prioritized.
 
-### Smart Solution
+The goal of this project was simple: give residents a clearer way to submit reports, and give officers a dashboard where they can manage those reports from one place.
 
-**Radar Warga** serves as an _End-to-End_ solution bridging the gap between citizens and city management. This platform unifies citizen reports into a single, integrated dashboard that is transparent and accountable.
+### What It Does
 
-The system's standout feature is the integration of **Artificial Intelligence (Computer Vision)** using the **YOLO** algorithm. Every uploaded photo of damage is automatically analyzed to:
+With Radar Warga, residents can submit a report with a location, description, and photo of the damage. The report is stored in the system and shown in a dashboard, so the team can review it, update the status, and decide what needs attention first.
 
-1.  **Validate Reports:** Ensure the photo is relevant to damage categories.
-2.  **Classify Damage Severity:** Objectively determine repair urgency (Low, Medium, High).
+We also added image analysis using **YOLO**. The uploaded photo is sent to a separate Python and Flask service, then processed to help identify the type of damage and estimate its priority level. The result is sent back to the Laravel backend and attached to the report.
 
-This analysis process runs _asynchronously_, ensuring the user experience remains fast and responsive despite the heavy AI computation occurring in the background.
+This does not replace manual review, but it helps provide an initial reference so reports can be sorted more consistently.
 
-### Technical Architecture & Workflow
+### How It Works
 
-The system is built on a robust stack ensuring reliability and scalability:
+1. Residents submit a report with location, description, and photo.
+2. The Laravel backend stores the report data in MySQL.
+3. The uploaded photo is sent to a separate Python and Flask service.
+4. YOLO processes the image and returns the analysis result.
+5. The backend updates the report with category and priority information.
+6. Officers can review and manage the reports from the dashboard.
 
-- **Core Stack**: Laravel, Inertia.js, React, MySQL
-- **AI Service**: Python, Flask, YOLO (Computer Vision)
+### Tech Stack
 
-**How It Works:**
-
-1.  **Data Ingestion**: The Laravel backend receives the user's report data and stores the text details and images in MySQL.
-2.  **Async Processing**: The system asynchronously sends the image to the independent AI Service (built with Python & Flask).
-3.  **AI Analysis**: The YOLO model processes the image to detect specific damage types and classify severity.
-4.  **Callback Mechanism**: Once analysis is complete, the results are sent back to the Laravel backend via a callback.
-5.  **Final Update**: The report record is updated with the AI-generated score, category, and specific damage details, prioritizing it for the relevant authorities.
+- **Main App**: Laravel, Inertia.js, React, MySQL
+- **Image Analysis Service**: Python, Flask, YOLO
 
 <div class="grid md:grid-cols-2 gap-8 items-center not-prose">
 <div class="prose prose-invert">
 
-### Achievements
+### Achievement
 
-This project was developed in a short timeframe during the **“Next-Gen Software Engineering with Artificial Intelligence”** IT Bootcamp organized by **Universitas Bina Sarana Informatika (UBSI)**, held at **Hotel Asyana, Sentul Bogor** on **January 7–8, 2026**.
+This project was created during the **“Next-Gen Software Engineering with Artificial Intelligence”** IT Bootcamp by **Universitas Bina Sarana Informatika (UBSI)** at **Hotel Asyana, Sentul Bogor**, held on **January 7 to 8, 2026**.
 
-As the **Project Manager**, I was responsible for coordinating the team, designing the system architecture, and ensuring seamless integration between the Frontend, Backend, and AI Service. Our hard work paid off by securing **3rd Place**, proving that advanced technology can be effectively applied to solve real-world community problems.
+I worked as the **Project Manager**, helping coordinate the team, plan the system flow, and make sure the frontend, backend, and image analysis service could work together. Radar Warga won **3rd Place** in the event.
 
 </div>
 
 <div>
-  <img src="/projects/radar-warga-gallery-2.jpeg" alt="Achievements" class="rounded-xl shadow-lg border border-zinc-800 w-full" />
+  <img src="/projects/radar-warga-gallery-2.jpeg" alt="Radar Warga achievement" class="rounded-xl shadow-lg border border-zinc-800 w-full" />
 </div>
 </div>

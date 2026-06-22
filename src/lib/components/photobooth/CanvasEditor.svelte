@@ -30,7 +30,7 @@
 
 	function saveHistory() {
 		if (isRestoringHistory || !canvas) return;
-		const json = JSON.stringify(canvas.toJSON(['id', 'name', 'isSlot', 'hasImage']));
+		const json = JSON.stringify(canvas.toObject(['id', 'name', 'isSlot', 'hasImage']));
 		undoStack.push(json);
 		if (undoStack.length > MAX_HISTORY) undoStack.shift();
 		redoStack = [];
@@ -100,7 +100,7 @@
 		if (activeObj) {
 			const isText = activeObj.type === 'i-text';
 			const isShape = activeObj.type === 'rect' || activeObj.type === 'path' || activeObj.type === 'circle';
-			
+
 			onSelectionUpdate({
 				// @ts-ignore
 				text: isText ? activeObj.text : null,
@@ -148,20 +148,20 @@
 	// 1. Add Photo to Canvas (replaces the first available empty slot, or adds freely)
 	export async function addPhoto(dataUrl: string) {
 		const img = await fabric.FabricImage.fromURL(dataUrl);
-		
+
 		const activeObj = canvas.getActiveObject();
-		
+
 		// If a photo is currently selected, replace it
 		// @ts-ignore
 		if (activeObj && activeObj.isSlot && activeObj.hasImage && activeObj.clipPath) {
 			const oldScale = activeObj.scaleX!;
 			const slotWidth = activeObj.clipPath.width! * oldScale;
 			const slotHeight = activeObj.clipPath.height! * oldScale;
-			
+
 			const scaleX = slotWidth / img.width!;
 			const scaleY = slotHeight / img.height!;
 			const scale = Math.max(scaleX, scaleY);
-			
+
 			img.scale(scale);
 
 			img.set({
@@ -186,7 +186,7 @@
 				rx: 10 / scale,
 				ry: 10 / scale
 			});
-			
+
 			img.set({ clipPath });
 
 			const index = canvas.getObjects().indexOf(activeObj);
@@ -205,11 +205,11 @@
 			// Calculate scale to fill the slot (cover)
 			const slotWidth = targetSlot.width! * targetSlot.scaleX!;
 			const slotHeight = targetSlot.height! * targetSlot.scaleY!;
-			
+
 			const scaleX = slotWidth / img.width!;
 			const scaleY = slotHeight / img.height!;
 			const scale = Math.max(scaleX, scaleY);
-			
+
 			img.scale(scale);
 
 			// Center the image at the slot's center
@@ -235,7 +235,7 @@
 				rx: 10 / scale, // rounded corners optionally
 				ry: 10 / scale
 			});
-			
+
 			img.set({ clipPath });
 
 			// Remove the empty placeholder and add the image
@@ -272,7 +272,7 @@
 			const slotWidth = width * 0.4;
 			const slotHeight = (height - padding * 4) / 3;
 			const startX = width / 2;
-			
+
 			for (let i = 0; i < 3; i++) {
 				const rect = new fabric.Rect({
 					left: startX,
@@ -299,7 +299,7 @@
 			// 2x2 grid
 			const slotWidth = (width - padding * 3) / 2;
 			const slotHeight = (height - padding * 3) / 2;
-			
+
 			for (let row = 0; row < 2; row++) {
 				for (let col = 0; col < 2; col++) {
 					const rect = new fabric.Rect({
@@ -325,7 +325,7 @@
 				}
 			}
 		}
-		
+
 		canvas.renderAll();
 	}
 
@@ -626,7 +626,7 @@
 </script>
 
 <div class="w-full flex justify-center" bind:clientWidth={containerWidth} style="height: {height * scale}px;">
-	<div 
+	<div
 		class="relative overflow-hidden rounded-xl border border-white/10 bg-zinc-900 shadow-2xl"
 		style="transform: scale({scale}); transform-origin: top center; width: {width}px; height: {height}px;"
 	>
@@ -634,7 +634,7 @@
 	</div>
 </div>
 
-<svelte:window  
+<svelte:window
 	on:keydown={(e) => {
 		if (e.key === 'Delete' || e.key === 'Backspace') {
 			// Only delete if we are not editing text
@@ -645,5 +645,5 @@
 			}
 			deleteSelected();
 		}
-	}} 
+	}}
 />

@@ -28,7 +28,7 @@
 		<p class="text-lg text-zinc-400">Things I've built</p>
 	</div>
 
-	<!-- {#if projects.length > 0}
+	{#if projects.length > 0}
 		<div class="space-y-6">
 			{#each projects as project}
 				<a
@@ -37,10 +37,10 @@
 				>
 					<h3 class="mb-2 text-xl font-bold text-white">{project.metadata.title}</h3>
 					<p class="text-sm text-zinc-400">{project.metadata.description}</p>
-					{#if project.metadata.tags}
+					{#if project.metadata.tech}
 						<div class="mt-4 flex flex-wrap gap-2">
-							{#each project.metadata.tags as tag}
-								<span class="rounded-lg bg-white/5 px-2 py-1 text-xs text-zinc-400">{tag}</span>
+							{#each project.metadata.tech as tech}
+								<span class="rounded-lg bg-white/5 px-2 py-1 text-xs text-zinc-400">{tech}</span>
 							{/each}
 						</div>
 					{/if}
@@ -49,5 +49,5 @@
 		</div>
 	{:else}
 		<div class="text-center text-zinc-500">No projects found.</div>
-	{/if} -->
+	{/if}
 </section>
