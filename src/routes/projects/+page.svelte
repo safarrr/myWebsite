@@ -8,13 +8,13 @@
 <svelte:head>
 	<title>Projects | Safarudin</title>
 	<meta name="description" content="Showcase of my latest projects and experiments." />
-	<link rel="canonical" href="https://safarudin.my.id/projects" />
-	<meta property="og:url" content="https://safarudin.my.id/projects" />
+	<link rel="canonical" href="https://safarudin.com/projects" />
+	<meta property="og:url" content="https://safarudin.com/projects" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Projects | Safarudin" />
 	<meta property="og:description" content="Showcase of my latest projects and experiments." />
-	<meta property="twitter:domain" content="safarudin.my.id" />
-	<meta property="twitter:url" content="https://safarudin.my.id/projects" />
+	<meta property="twitter:domain" content="safarudin.com" />
+	<meta property="twitter:url" content="https://safarudin.com/projects" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Projects | Safarudin" />
 	<meta name="twitter:description" content="Showcase of my latest projects and experiments." />

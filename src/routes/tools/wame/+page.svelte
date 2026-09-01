@@ -37,13 +37,13 @@
 <svelte:head>
 	<title>WhatsApp Link Generator | Tools</title>
 	<meta name="description" content="Generate direct chat links for multiple WhatsApp numbers easily without saving contacts." />
-	<link rel="canonical" href="https://safarudin.my.id/tools/wame" />
-	<meta property="og:url" content="https://safarudin.my.id/tools/wame" />
+	<link rel="canonical" href="https://safarudin.com/tools/wame" />
+	<meta property="og:url" content="https://safarudin.com/tools/wame" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="WhatsApp Link Generator | Tools" />
 	<meta property="og:description" content="Generate direct chat links for multiple WhatsApp numbers easily without saving contacts." />
-	<meta property="twitter:domain" content="safarudin.my.id" />
-	<meta property="twitter:url" content="https://safarudin.my.id/tools/wame" />
+	<meta property="twitter:domain" content="safarudin.com" />
+	<meta property="twitter:url" content="https://safarudin.com/tools/wame" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="WhatsApp Link Generator | Tools" />
 	<meta name="twitter:description" content="Generate direct chat links for multiple WhatsApp numbers easily without saving contacts." />

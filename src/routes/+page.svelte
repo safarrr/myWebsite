@@ -10,17 +10,17 @@
 	<title>Safarudin | Programer</title>
 	<meta name="description" content="programmer from West Java, Indonesia. I use my skills to create cool stuff or just have fun swimming through code!" />
 	<meta name="keywords" content="web developer, front-end development, safarrr,safarudin,programmer" />
-	<link rel="canonical" href="https://safarudin.my.id" />
+	<link rel="canonical" href="https://safarudin.com" />
 
 	<!-- Facebook Meta Tags -->
-	<meta property="og:url" content="https://safarudin.my.id" />
+	<meta property="og:url" content="https://safarudin.com" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Safarudin | Programer" />
 	<meta property="og:description" content="programmer from West Java, Indonesia. I use my skills to create cool stuff or just have fun swimming through code!" />
 
 	<!-- Twitter -->
-	<meta property="twitter:domain" content="safarudin.my.id" />
-	<meta property="twitter:url" content="https://safarudin.my.id" />
+	<meta property="twitter:domain" content="safarudin.com" />
+	<meta property="twitter:url" content="https://safarudin.com" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Safarudin | Programer" />
 	<meta name="twitter:description" content="programmer from West Java, Indonesia. I use my skills to create cool stuff or just have fun swimming through code!" />

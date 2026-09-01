@@ -1,7 +1,7 @@
 import { getPostAll } from '$lib/utils';
 import { getProjectAll } from '$lib/utils';
 
-const BASE_URL = 'https://safarudin.my.id';
+const BASE_URL = 'https://safarudin.com';
 
 export async function GET() {
 	const posts = getPostAll();

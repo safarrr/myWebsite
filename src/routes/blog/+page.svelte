@@ -8,13 +8,13 @@
 <svelte:head>
 	<title>Blog | Safarudin</title>
 	<meta name="description" content="Thoughts, tutorials, and insights on web development and design." />
-	<link rel="canonical" href="https://safarudin.my.id/blog" />
-	<meta property="og:url" content="https://safarudin.my.id/blog" />
+	<link rel="canonical" href="https://safarudin.com/blog" />
+	<meta property="og:url" content="https://safarudin.com/blog" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="Blog | Safarudin" />
 	<meta property="og:description" content="Thoughts, tutorials, and insights on web development and design." />
-	<meta property="twitter:domain" content="safarudin.my.id" />
-	<meta property="twitter:url" content="https://safarudin.my.id/blog" />
+	<meta property="twitter:domain" content="safarudin.com" />
+	<meta property="twitter:url" content="https://safarudin.com/blog" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="Blog | Safarudin" />
 	<meta name="twitter:description" content="Thoughts, tutorials, and insights on web development and design." />
