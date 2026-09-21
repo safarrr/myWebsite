@@ -1,4 +1,5 @@
-import { Github, Twitter, Linkedin, Mail, Instagram, Gitlab, Cloud } from 'lucide-svelte';
+import { Github, Twitter, Linkedin, Mail, Instagram, Cloud } from 'lucide-svelte';
+import ThreadsIcon from '$lib/components/ThreadsIcon.svelte';
 
 export const SOCIALS = [
 	{
@@ -26,6 +27,12 @@ export const SOCIALS = [
 		icon: Linkedin
 	},
 	{
+		label: 'Threads',
+		href: 'https://www.threads.com/@safar19x',
+		handle: '@safar19x',
+		icon: ThreadsIcon
+	},
+	{
 		label: 'Instagram',
 		href: 'https://instagram.com/safar19x',
 		handle: '@safar19x',
@@ -41,14 +48,16 @@ export const SOCIALS = [
 
 export const TECH_STACK = [
 	'SvelteKit',
-	'python',
 	'Nextjs',
 	'Nuxtjs',
+	'Vuejs',
+	'React',
+	'go',
+	'python',
 	'TypeScript',
 	'TailwindCSS',
 	'Node.js',
 	'Laravel',
 	'PostgreSQL',
-	'MySQL',
-	'React'
+	'MySQL'
 ];
