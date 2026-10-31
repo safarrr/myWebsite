@@ -4,17 +4,17 @@
 
 <svelte:head>
 	<title>About | Safarudin</title>
-	<meta name="description" content="Learn more about Safarudin and his journey as a programmer from West Java, Indonesia." />
+	<meta name="description" content="Get to know Safarudin, a curious programmer from West Java, Indonesia, who enjoys exploring ideas and learning by doing." />
 	<link rel="canonical" href="https://safarudin.com/about" />
 	<meta property="og:url" content="https://safarudin.com/about" />
 	<meta property="og:type" content="website" />
 	<meta property="og:title" content="About | Safarudin" />
-	<meta property="og:description" content="Learn more about Safarudin and his journey as a programmer from West Java, Indonesia." />
+	<meta property="og:description" content="Get to know Safarudin, a curious programmer from West Java, Indonesia, who enjoys exploring ideas and learning by doing." />
 	<meta property="twitter:domain" content="safarudin.com" />
 	<meta property="twitter:url" content="https://safarudin.com/about" />
 	<meta name="twitter:card" content="summary_large_image" />
 	<meta name="twitter:title" content="About | Safarudin" />
-	<meta name="twitter:description" content="Learn more about Safarudin and his journey as a programmer from West Java, Indonesia." />
+	<meta name="twitter:description" content="Get to know Safarudin, a curious programmer from West Java, Indonesia, who enjoys exploring ideas and learning by doing." />
 </svelte:head>
 
 <section class="container mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
@@ -27,15 +27,19 @@
 	<div class="space-y-12">
 		<div>
 			<p class="text-lg leading-relaxed text-zinc-400">
-				My name is <span class="font-semibold text-white">Safarudin</span>. I'm a programmer from
-				West Java, Indonesia, who loves turning ideas into reality through code. Whether it's
-				building web applications, exploring new technologies, or just experimenting with creative
-				projects, I enjoy every step of the process.
+				Hi, I'm <span class="font-semibold text-white">Safarudin</span>, a programmer from West
+				Java, Indonesia. I'm curious about how things work and enjoy following an idea to see
+				where it leads. Sometimes that means building something useful; other times, it's simply
+				trying something new for the fun of it.
 			</p>
 			<p class="mt-4 text-lg leading-relaxed text-zinc-400">
-				Beyond coding, I have a passion for UI/UX design and often use Figma to craft clean,
-				user-friendly interfaces. Reading books is another passion, especially those about
-				technology, self-improvement, and new topics that spark curiosity.
+				I like learning by doing. Trying things out, running into problems, and figuring them out
+				is a big part of how I learn. I enjoy having room to experiment and improve an idea as I
+				understand it better.
+			</p>
+			<p class="mt-4 text-lg leading-relaxed text-zinc-400">
+				This website is a small space for things I make, things I learn, and whatever catches my
+				interest along the way.
 			</p>
 		</div>
 

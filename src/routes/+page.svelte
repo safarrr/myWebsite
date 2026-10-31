@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { ArrowRight } from 'lucide-svelte';
 	import { SOCIALS, TECH_STACK } from '$lib/config';
+	import ThreadsIcon from '$lib/components/ThreadsIcon.svelte';
 
 	let { data } = $props();
-	let { projects } = $derived(data);
+	let { projects = [], threads = [] } = $derived(data);
 </script>
 
 <svelte:head>
@@ -49,6 +50,70 @@
 			</div>
 		</div>
 	{/if}
+
+	{#if threads.length > 0}
+		<div class="border-t border-white/10 px-5 py-6">
+			<div class="mb-4 flex items-center justify-between gap-4">
+				<div>
+					<h2 class="text-xl font-bold text-white">Latest on Threads</h2> 
+				</div>
+				<a
+					href="https://www.threads.com/@safar19x"
+					target="_blank"
+					rel="noopener noreferrer"
+					class="inline-flex items-center gap-2 text-sm text-zinc-400 transition-colors hover:text-white"
+				>
+					<ThreadsIcon size={16} />
+					@safar19x
+				</a>
+			</div>
+			<div class="grid max-w-2xl gap-3">
+				{#each threads as post (post.id)}
+					<a
+						href={post.permalink}
+						target="_blank"
+						rel="noopener noreferrer"
+						class="group grid overflow-hidden rounded-xl border border-white/10 bg-zinc-900/50 transition-colors hover:border-white/20 hover:bg-zinc-900/80 sm:grid-cols-[minmax(0,0.9fr)_minmax(0,1fr)]"
+					>
+						{#if post.media_type === 'IMAGE' && post.media_url}
+							<img
+								src={post.media_url}
+								alt="Media from a Threads post"
+								loading="lazy"
+								class="aspect-video w-full bg-black object-contain sm:aspect-auto sm:h-full sm:min-h-40"
+							/>
+						{:else if post.media_type === 'VIDEO' && post.thumbnail_url}
+							<img
+								src={post.thumbnail_url}
+								alt="Video preview from a Threads post"
+								loading="lazy"
+								class="aspect-video w-full bg-black object-contain sm:aspect-auto sm:h-full sm:min-h-40"
+							/>
+						{/if}
+						<div class="flex min-h-36 flex-col justify-between p-4">
+							{#if post.text}
+								<p class="line-clamp-4 whitespace-pre-wrap break-words text-sm leading-5 text-zinc-300">
+									{post.text}
+								</p>
+							{:else}
+								<p class="text-sm text-zinc-400">View this post on Threads</p>
+							{/if}
+							<div class="mt-3 flex items-center justify-between gap-3 border-t border-white/10 pt-3 text-xs text-zinc-500">
+								<time datetime={post.timestamp}>
+									{new Intl.DateTimeFormat('id-ID', {
+										dateStyle: 'medium',
+										timeZone: 'Asia/Jakarta'
+									}).format(new Date(post.timestamp))}
+								</time>
+								<span class="transition-colors group-hover:text-zinc-300">Open post ↗</span>
+							</div>
+						</div>
+					</a>
+				{/each}
+			</div>
+		</div>
+	{/if}
+
 	<div class="space-y-12">
 		<div class="border-t border-white/10 px-5 pt-5 pb-5">
 			<h2 class="mb-6 text-xl font-bold text-white">Tech Stack</h2>

@@ -7,10 +7,7 @@
 </script>
 
 <div class="flex min-h-[100dvh] flex-col">
-	<!-- Background Noise/Texture could go here -->
-	<div
-		class="pointer-events-none fixed inset-0 z-[-1] bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20"
-	></div>
+	<div class="pointer-events-none fixed inset-0 z-[-1] bg-[radial-gradient(ellipse_at_top,_rgba(63,63,70,0.18),_transparent_60%)]"></div>
 
 	<Navbar />
 	<main class="flex-1 pt-20">
